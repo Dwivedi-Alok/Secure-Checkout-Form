@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-content">
+            <h2>Secure Checkout</h2>
+
+            <form action="action.php">
+                <div class="name">
+                    <label for="name">Cardholder Name</label>
+                    <input type="text" name="Cardholder Name" id="name" required>
+                </div>
+                <div class="number">
+                    <label for="cardnumber">Card Number</label>
+                    <input type="text" name="cardnumber" id="cardnumber" 
+                           placeholder="xxxxxxxxxxxxxxxx" 
+                           pattern="\d{19}" 
+                           maxlength="19" 
+                           required>
+                </div>
+                
+                    <div class="form-group-inline">
+                        <div class="cvv">
+                            <label for="cvv">CVV</label>
+                            <input type="text" name="cvv" id="cvv" maxlength="3" required>
+                        </div>
+                        
+                        <div class="expiry">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Billing Address</label>
+                    <input type="text" id="address" name="address" placeholder="Street Address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <p>Order Summary:</p>
+                    <p>Item 1 - $10.00</p>
+                    <p>Item 2 - $15.00</p>
+                    <p class="total">Total: $25.00</p>
+                </div>
+
+                <p class="secure-msg">Your information is encrypted and secure.</p>
+                <button class="checkout-btn" type="submit">Pay Now</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
