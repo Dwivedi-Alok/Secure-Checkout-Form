@@ -1,224 +1,174 @@
-/* General Styles */
 body {
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(275deg, #4B79A1, #283E51); /* Gradient background */
-    background-size: 400% 400%;
-    animation: gradientAnimation 8s ease infinite;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #1d1e22, #393f4d);
+    color: #d4d4dc;
 }
-
-/* Gradient animation for background */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Container styles */
-.container {
-    background-color: white;
-    margin: 40px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 500px;
-    filter: blur(4px);
-    transition: 0.5s ease;
-    animation: fadeIn 0.8s ease;
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Container content styles */
-.container-content {
-    width: 100%;
-   
-    
-}
-.container:hover{
-    filter: blur(0px);
-
-}
-/* Heading styles */
-h2 {
-    text-align: center;
-    color: #4B79A1;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-}
-
-/* Label styles */
-label {
-    font-size: 0.95rem;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-}
-
-/* Input styles */
-input[type="text"], input[type="password"], input[type="email"], input[type="number"], select {
-    padding: 12px;
-    font-size: 1rem;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Input styles on focus */
-input:focus, select:focus {
-    border-color: #4B79A1;
-    outline: none;
-    box-shadow: 0 0 6px rgba(75, 121, 161, 0.5);
-}
-
-/* CVV input styling */
-.cvv input {
-    width: 90px;
-}
-
-/* Button styles */
-.checkout-btn {
-    /* background-color: #4B79A1; */
-    background-color: #4B79A1;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    margin: 0 auto;
-    display: block;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-}
-
-.checkout-btn:hover:not([disabled]) {
-    background-color: #3b6a8f;
-    box-shadow: 0 8px 20px rgba(59, 106, 143, 0.5);
-    transform: translateY(-3px);
-}
-
-.checkout-btn[disabled] {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-/* Secure message */
-.secure-msg {
-    opacity: 0.8;
-    font-size: 0.85rem;
-    text-align: center;
-    margin-top: 20px;
-    color: #4B79A1;
-    transition: opacity 0.3s ease;
-}
-
-.secure-msg:hover {
-    opacity: 1;
-    font-size: 0.9rem;
-    transform: translateY(3px);
-}
-
-/* Form Group Styles */
-.form-group {
-    margin-top: 15px;
-}
-
-/* Input styling for the dropdowns */
-select {
-    padding: 13px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Styling for the order summary */
-.order-summary {
-    margin-top: 30px;
-    background-color: #f5f8fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-}
-
-.order-summary p {
-    margin: 8px 0;
-}
-
-.order-summary .total {
+h1, h3{
     font-weight: bold;
-    color: #4B79A1;
-    font-size: 1.1rem;
+    transition: all 0.6s ease;
+    cursor: pointer;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        margin: 20px;
-        padding: 20px;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    input[type="text"], input[type="password"], input[type="email"], input[type="number"], select {
-        font-size: 0.9rem;
-    }
-
-    .checkout-btn {
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    .order-summary {
-        font-size: 0.9rem;
-    }
+h3:hover,h1:hover{
+    color: #8b9467;
+    transform: scale(1.3);
 }
-/* Styling for inline form group */
-.form-group-inline {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #393f4d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #feda6a;
+}
+ul {
+    list-style: none;
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    display: inline;
+}
+ul li a {
+    text-decoration: none;
+    color: #feda6a;
+    font-weight: bold;
+}
+.contact-btn {
+    background: #feda6a;
+    color: #1d1e22;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.contact-btn:hover{
+    background-color: #feda6a;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 150px 20px 100px;
+}
+#DP {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #feda6a;
+    animation: float 3s ease-in-out infinite;
+    margin-top: 100px;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.text-content {
+    max-width: 600px;
+}
+.cta-btn {
+    background: #feda6a;
+    color: #1d1e22;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.cta-btn:hover {
+    background: #d4b04c;
+}
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #28292e;
+    color: #feda6a;
+}
+.portfolio {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: #1d1e22;
+    padding: 40px 20px;
+    text-align: center;
+}
+.portfolio-item {
+    max-width: 300px;
+    background: #393f4d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.about, .contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #28292e;
+    color: #feda6a;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-top: 25px;
+    opacity: 50%;
+    grid-column-start: 1;
+  
+    
+    
+}
+a{
+    transition: all 0.6s ease;
+}
+a:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 15px gold, 0 0 30px gold; /* Brighter glow */
+    filter: drop-shadow(0 0 10px gold); 
 }
 
-/* Expiry input styling */
-.expiry input {
-    width: 100px;
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
 }
-
-/* Adjust label alignment and spacing */
-.form-group-inline label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
-    color: #333;
+.contact input, .contact textarea, .contact button {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 300px) {
-    .form-group-inline {
-        flex-direction: column;
-    }
+.contact input, .contact textarea {
+    background: #393f4d;
+    color: white;
 }
-
-
+.contact button {
+    background: #feda6a;
+    color: #1d1e22;
+    font-weight: bold;
+    cursor: pointer;
+}
